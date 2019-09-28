@@ -10,6 +10,7 @@ import { Provider as ReduxQueryProvider } from "redux-query-react";
 
 //components
 import './styles/css/index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { store, getQueries } from './store';
 import Routes from "./routes";
 

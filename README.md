@@ -1,6 +1,5 @@
-# Username Changer
-This simple application serves as a convenient window for updating and viewing usernames.
-Checkout [My News-Web](https://news-web-2019.herokuapp.com/) here.
+# Profile Changer
+This simple application serves as a convenient window for updating and viewing user profile.
 
 # Table of Contents
 
@@ -23,10 +22,9 @@ Checkout [My News-Web](https://news-web-2019.herokuapp.com/) here.
 1. Install [`Node JS`](https://nodejs.org/en/).
 2. To clone, run `git clone https://github.com/rethes/username-changer.git`.
 3. `cd` into the root of the **project directory**.
-4. Run `yarn add` on the terminal to install dependencies.
-5. 
-6. To compiles and minimize for production run `yarn build`
-7. To start the application run `yarn start`
+4. Run `yarn add` on the terminal to install dependencies. 
+5. To compiles and minimize for production run `yarn build`
+6. To start the application run `yarn start`
 
 ### Support or Contribution
 
