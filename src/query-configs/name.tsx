@@ -1,20 +1,23 @@
-export const nameRequest = () => {
+// action creators and reducers
+export const userRequest = () => {
   return {
-    url: `/api/name`,
+    url: `/api/user`,
     update: {
+      age: (prev: any, next: any) => next,
       name: (prev: any, next: any) => next,
     },
   };
 };
 
-export const changeNameMutation = (name: string, optimistic: any) => {
+export const changeNameMutation = (name: string, age: string, optimistic: any) => {
   const queryConfig = {
     url: `/api/change-name`,
     body: {
-      name,
+      name, age
     },
     update: {
       name: (prev: any, next: any) => next,
+      age: (prev: any, next: any) => next,
     },
     optimisticUpdate: {}
   };
@@ -22,6 +25,7 @@ export const changeNameMutation = (name: string, optimistic: any) => {
   if (optimistic) {
     queryConfig.optimisticUpdate = {
       name: () => name,
+      age: () => age,
     };
   }
 

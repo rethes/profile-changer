@@ -3,6 +3,7 @@ const artificialDelayDuration = 1000;
 // Fake database to record the name
 const memoryDb = {
   name: 'Temporary Name',
+  age: '27'
 };
 
 const mockNetworkInterface = (url: { match: any }, method: string, { body }: any) => {
@@ -17,11 +18,12 @@ const mockNetworkInterface = (url: { match: any }, method: string, { body }: any
       }
     },
     execute(callback:any){
-      if (url.match(/^\/api\/name/)) {
+      if (url.match(/^\/api\/user/)) {
         // Endpoint for getting the current name
         if (method.toUpperCase() === "GET") {
           timeoutId = setTimeout(() => {
             callback(null, 200, {
+              age: memoryDb.age,
               name: memoryDb.name
             });
           }, artificialDelayDuration);
@@ -29,6 +31,7 @@ const mockNetworkInterface = (url: { match: any }, method: string, { body }: any
           callback(null, 405);
         }
       }
+
       else if (url.match(/^\/api\/change-name/)) {
         // Endpoint for changing the name
 
@@ -40,11 +43,11 @@ const mockNetworkInterface = (url: { match: any }, method: string, { body }: any
         // Validate empty input
         if (!body.name) {
           timeoutId = setTimeout(() => {
-            callback(null, 400, null, "Username cannot be empty");
+            callback(null, 400, null, "The Name field cannot be empty");
           }, artificialDelayDuration);
           return;
         }
-        // Validate input
+        // Validate name input
         if (
           body.name.trim() !== body.name ||
           !body.name.match(/^[a-zA-Z0-9]+$/)
@@ -60,12 +63,21 @@ const mockNetworkInterface = (url: { match: any }, method: string, { body }: any
           return;
         }
 
+        if (!body.age) {
+          timeoutId = setTimeout(() => {
+            callback(null, 400, null, "The Age field cannot be empty");
+          }, artificialDelayDuration);
+          return;
+        }
+
         //Add name to the database
         memoryDb.name = body.name;
+        memoryDb.age = body.age;
 
         timeoutId = setTimeout(() => {
           const responseBody = {
-            name: memoryDb.name
+            name: memoryDb.name,
+            age: memoryDb.age
           };
           callback(null, 200, responseBody, JSON.stringify(responseBody));
         }, artificialDelayDuration);
