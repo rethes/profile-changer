@@ -1,44 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Username Changer
+This simple application serves as a convenient window for updating and viewing usernames.
+Checkout [My News-Web](https://news-web-2019.herokuapp.com/) here.
 
-## Available Scripts
+# Table of Contents
 
-In the project directory, you can run:
+- [Technology Stack](#technology-stack)
+- [Installation](#installation)
 
-### `npm start`
+## Technology Stack
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React
+- Redux
+- Redux-query
+- Bootstrap
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+- You can setup this project on your machine locally using the approach below:
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setting Up For Local Development
 
-### `npm run build`
+1. Install [`Node JS`](https://nodejs.org/en/).
+2. To clone, run `git clone https://github.com/rethes/username-changer.git`.
+3. `cd` into the root of the **project directory**.
+4. Run `yarn add` on the terminal to install dependencies.
+5. 
+6. To compiles and minimize for production run `yarn build`
+7. To start the application run `yarn start`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Support or Contribution
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+For any suggestions or contributions please do not hesitate to contact the owners of this repository.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Contributions to this project are welcomed by all, If you need to contribute, follow the steps below
 
-### `npm run eject`
+- **Fork** the repository
+- Follow [Installation and Setup](#installation) as explained earlier
+- Create a branch off `develop` for the feature you wish to add
+- Make necessary changes, commit and raise a pull request against develop.
+  **Note** when making contributions, please endeavour to follow the [Airbnb](https://github.com/airbnb/javascript) javascript style guide. Also make sure to follow the [Engineering playbook](https://github.com/andela/engineering-playbook/tree/master/5.%20Developing/Conventions) for conventions.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Customize configuration
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+See [Configuration Reference](https://cli.vuejs.org/config/).
